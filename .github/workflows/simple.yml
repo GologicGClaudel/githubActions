@@ -20,3 +20,8 @@ jobs:
         run: ls
       - name: Checkout
         uses: actions/checkout@v1
+  run-powershell-command:
+    runs-on: windows-2022
+    steps:
+      - name: Directory List PowerShell
+        run: Get-Location
