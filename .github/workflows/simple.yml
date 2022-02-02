@@ -12,7 +12,7 @@ on:
       - reopened
 
 jobs:
-  run-github-actions:
+  run-shell-command:
     runs-on: ubuntu-18.04
     steps:
       - name: List files
