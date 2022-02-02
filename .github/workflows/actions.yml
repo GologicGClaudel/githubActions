@@ -1,0 +1,21 @@
+name: Actions Workflow
+
+on:
+  repository_dispatch:
+    types:
+      - build
+  pull_request:
+    types:
+      - closed
+      - assigned
+      - opened
+      - reopened
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: List files
+        run: ls
+      - name: Checkout
+        uses: actions/checkout@v1
