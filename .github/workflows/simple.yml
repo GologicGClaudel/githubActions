@@ -5,6 +5,15 @@ on:
     types:
       - build
   push:
+    branches:
+      - main
+      - "features/*" # Matches any string like features/featureA except features/other/otherFeatureA
+      - "features/**"# Marches everthing
+      - "!features/featC"# Marches everthing
+    tags:
+      - v1
+    paths-ignore:
+      - "docs/**"
   pull_request:
     types:
       - closed
