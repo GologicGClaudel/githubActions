@@ -8,7 +8,7 @@ jobs:
         os: [macos-10.15, ubuntu-18.04, windows-2019]
         node_version: [6, 8, 10] # Will run 3 times
         include:
-          - os: windows-2019
+          - os: ubuntu-18.04
             node_version: 4
             is_ubuntu_18: "true"
         exclude:
