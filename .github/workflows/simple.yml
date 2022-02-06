@@ -1,9 +1,9 @@
 name: Actions Workflow
 
 on:
-  repository_dispatch:
-    types:
-      - build
+#  repository_dispatch:
+#    types:
+#      - build
   push:
     branches:
       - main
