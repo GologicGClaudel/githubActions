@@ -10,7 +10,7 @@ jobs:
         include:
           - os: windows-2019
             node_version: 4
-            is_ubuntu_18: "true"
+            is_ubuntu_18: "truee"
         exclude:
           - os: ubuntu-18.04
             node_version: 10
@@ -30,4 +30,4 @@ jobs:
       - name: Log node version
         run: |
           node -v
-          echo ${IS_UBUNTU_18}
+          echo $IS_UBUNTU_18
