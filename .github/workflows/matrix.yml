@@ -3,12 +3,18 @@ on: push
 
 jobs:
   node-version:
-    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        os: [macos-10.15, ubuntu-18.04, windows-2019]
+        node_version: [6, 8, 10] # Will run 3 times
+#      max-parallel: 2
+      fail-fast: true # Stop if one of them fails. if set to false will still run in parallel if one of them fails
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Log node version
         run: node -v
       - uses: actions/setup-node@v1
         with:
-          node-version: 6
+          node-version: ${{ matrix.node_version }}
       - name: Log node version
         run: node -v
