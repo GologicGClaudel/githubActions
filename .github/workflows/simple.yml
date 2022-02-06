@@ -10,8 +10,8 @@ on:
       - "features/*" # Matches any string like features/featureA except features/other/otherFeatureA
       - "features/**"# Marches everthing
       - "!features/featC"# Marches everthing
-    tags:
-      - v1
+#    tags:
+#      - v1
     paths-ignore:
       - "docs/**"
   pull_request:
